@@ -26,7 +26,7 @@ pipeline {
     }
     post {
          always {
-          mail to: 'root@nazareth.gonzalonazareno.org',
+          mail to: 'debian@nazareth.jenkins.org',
           subject: "Status of pipeline: ${currentBuild.fullDisplayName}",
           body: "${env.BUILD_URL} has result ${currentBuild.result}"
         }
